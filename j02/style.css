@@ -1,0 +1,94 @@
+body {
+  font-family: tahoma;
+  background-image: url(image/pattern.png);
+  margin: 0;
+}
+
+header {
+  text-align: center;
+  background: #ddd;
+  padding: 5px 0px;
+}
+
+.title1 {
+  font-size: 28px;
+  color: tomato;
+  font-weight: bold;
+}
+
+.title2 {
+  color: dodgerblue;
+}
+
+.game-list {
+  list-style-type: none;
+}
+
+.game-card {
+  text-align: center;
+  border: 2px black solid;
+  border-radius: 25px;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-bottom: 35px;
+  margin: 20px 30px;
+}
+
+.game-title {
+  color: black;
+  font-size: 24px;
+}
+
+.game-image {
+  width: 340px;
+}
+
+.game-description {
+  text-align: right;
+  direction: rtl;
+}
+
+.game-rank {
+  font-weight: bold;
+  background: whitesmoke;
+  border: 1px gray solid;
+  border-radius: 20px;
+  display: inline;
+  padding: 10px;
+}
+
+hr {
+  height: 3px;
+  background-color: black;
+}
+
+.game-platform-table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.game-platform-table td,
+.game-platform-table th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+.game-platform-table tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
+.text-green {
+  color: green;
+}
+
+.text-red {
+  color: red;
+}
+
+footer {
+  text-align: center;
+  background: #ddd;
+  padding: 16px 0px;
+  margin-top: 50px;
+}
