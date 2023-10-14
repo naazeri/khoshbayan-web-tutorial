@@ -7,7 +7,7 @@ body {
 header {
   text-align: center;
   background: #ddd;
-  padding: 5px 0px;
+  padding: 5px;
 }
 
 .title1 {
@@ -18,10 +18,6 @@ header {
 
 .title2 {
   color: dodgerblue;
-}
-
-.game-list {
-  list-style-type: none;
 }
 
 .game-card {
@@ -35,7 +31,6 @@ header {
 }
 
 .game-title {
-  color: black;
   font-size: 24px;
 }
 
@@ -62,20 +57,21 @@ hr {
   background-color: black;
 }
 
-.game-platform-table {
+table {
   border-collapse: collapse;
-  width: 100%;
+  width: 90%;
+  margin: auto;
 }
 
-.game-platform-table td,
-.game-platform-table th {
-  border: 1px solid #dddddd;
+td,
+th {
+  border: 1px solid #c5c5c5;
   text-align: left;
   padding: 8px;
 }
 
-.game-platform-table tr:nth-child(even) {
-  background-color: #dddddd;
+tr:nth-child(even) {
+  background-color: #e2e2e2;
 }
 
 .text-green {
@@ -89,6 +85,6 @@ hr {
 footer {
   text-align: center;
   background: #ddd;
-  padding: 16px 0px;
+  padding: 10px 0px;
   margin-top: 50px;
 }
