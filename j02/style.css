@@ -1,41 +1,33 @@
-body {
-  font-family: tahoma;
-  background-image: url(image/pattern.png);
+* {
   margin: 0;
+  padding: 0;
 }
 
-header {
-  text-align: center;
-  background: #ddd;
-  padding: 5px;
-}
-
-.title1 {
-  font-size: 28px;
+.text-red {
   color: tomato;
-  font-weight: bold;
 }
 
-.title2 {
-  color: dodgerblue;
+.text-green {
+  color: #00ff1a;
 }
 
-.game-card {
+.text-white {
+  color: #fff;
+}
+
+header,
+footer {
+  background-color: #000;
   text-align: center;
-  border: 2px black solid;
-  border-radius: 25px;
-  padding-left: 30px;
-  padding-right: 30px;
-  padding-bottom: 35px;
-  margin: 20px 30px;
+  padding: 30px 0;
+}
+
+.game-image {
+  width: 50%;
 }
 
 .game-title {
   font-size: 24px;
-}
-
-.game-image {
-  width: 340px;
 }
 
 .game-description {
@@ -45,46 +37,30 @@ header {
 
 .game-rank {
   font-weight: bold;
-  background: whitesmoke;
+  background: rgb(222, 222, 222);
   border: 1px gray solid;
   border-radius: 20px;
-  display: inline;
+  display: inline-block;
   padding: 10px;
 }
 
-hr {
-  height: 3px;
-  background-color: black;
-}
-
-table {
-  border-collapse: collapse;
-  width: 90%;
-  margin: auto;
-}
-
-td,
-th {
-  border: 1px solid #c5c5c5;
-  text-align: left;
-  padding: 8px;
-}
-
-tr:nth-child(even) {
-  background-color: #e2e2e2;
-}
-
-.text-green {
-  color: green;
-}
-
-.text-red {
-  color: red;
-}
-
-footer {
+.game-card {
   text-align: center;
-  background: #ddd;
-  padding: 10px 0px;
-  margin-top: 50px;
+  border: 2px black solid;
+  border-radius: 25px;
+  padding: 20px 20px;
+  margin: 40px 10%;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:visited,
+a:link {
+  color: #ff9100;
+}
+
+a:hover {
+  color: #a6ff00;
 }
