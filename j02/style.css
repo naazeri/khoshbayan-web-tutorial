@@ -8,7 +8,7 @@
 }
 
 .text-green {
-  color: #00ff1a;
+  color: #09d809;
 }
 
 .text-white {
@@ -37,7 +37,7 @@ footer {
 
 .game-rank {
   font-weight: bold;
-  background: rgb(222, 222, 222);
+  background: rgb(228, 227, 227);
   border: 1px gray solid;
   border-radius: 20px;
   display: inline-block;
