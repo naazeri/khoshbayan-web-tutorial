@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <form action="" method="post">
+    <label for="username">Username</label>
+    <input placeholder="Username" type="text" id="username" name="username">
+    <br>
+    <br>
+    <label for="password">Password</label>
+    <input type="password" id="password" name="password">
+    <br>
+    <br>
+    <input type="submit" value="Login">
+  </form>
+
+  <br>
+  <hr>
+
+  <form action="">
+    <fieldset>
+      <legend>Your Favorite Programming Languages?</legend>
+      <input type="checkbox" name="language" id="language1" value="js">
+      <label for="language1">JavaScript</label>
+      <br>
+      <input type="checkbox" name="language" id="language2" value="php">
+      <label for="language2">PHP</label>
+      <br>
+      <input type="checkbox" name="language" id="language3" value="csharp">
+      <label for="language3">C#</label>
+    </fieldset>
+
+    <fieldset>
+      <legend>You Device</legend>
+      <input type="radio" name="device" id="device1" value="laptop">
+      <label for="device1">Laptop</label>
+      <br>
+      <input type="radio" name="device" id="device2" value="pc">
+      <label for="device2">PC</label>
+      <br>
+      <input type="radio" name="device" id="device3" value="mobile">
+      <label for="device3">Mobile</label>
+    </fieldset>
+
+    <fieldset>
+      <legend>Your Console</legend>
+      <label for="console">Preferred Console:</label>
+      <select name="console" id="console">
+        <option value="option1">PlayStation</option>
+        <option value="option2">Xbox</option>
+        <option value="option3">Nintendo</option>
+        <option value="option4">PC</option>
+        <option value="option5">Mobile</option>
+      </select>
+    </fieldset>
+
+    <br>
+    <br>
+
+    <textarea placeholder="Write you comment..." name="comment" id="comment" cols="40" rows="8">
+    </textarea>
+
+    <br>
+    <br>
+    <input type="button" value="Clear">
+    <input type="submit" value="Send">
+
+  </form>
+</body>
+
+</html>
