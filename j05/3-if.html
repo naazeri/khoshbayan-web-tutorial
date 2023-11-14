@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var birthYear = prompt('Enter you birth year');
+
+      if (birthYear < 1402) {
+        var name = 'reza nazeri';
+        var age = 1402 - birthYear;
+        var status = '';
+
+        if (age >= 60) {
+          status = 'Old';
+        } else if (age >= 18) {
+          status = 'Young';
+        } else if (age > 0) {
+          status = 'Child';
+        }
+
+        alert(age + ' -> ' + status);
+      } else {
+        alert('Error, You are not born yet');
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      console.log(`
+      1-Espresso..........1$
+      2-Mocca.............3$
+      3-Latte.............10$
+      `);
+
+      var order = prompt('Enter Order Number:');
+      var takeAway = confirm('TakeAway?');
+      var price = 0;
+
+      switch (order) {
+        case '1':
+          price = 1;
+          break;
+        case '2':
+          price = 3;
+          break;
+        case '3':
+          price = 10;
+          break;
+        default:
+          price = -1;
+      }
+
+      if (price > 0) {
+        if (takeAway == false) {
+          price += 1;
+        }
+
+        alert(price + '$');
+      } else {
+        alert('This item does not exist in menu');
+      }
+    </script>
+  </body>
+</html>
