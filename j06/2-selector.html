@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+    .title {
+      color: orange;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="result" class="title">NAME</div>
+  <div id="result2" class="title">NAME2</div>
+
+  <script>
+    function log(text) {
+      console.log(text)
+    }
+
+    function main() {
+      // var resultElement = document.getElementById('result')
+      var resultElement = document.querySelector('#result')
+
+      log(resultElement.innerHTML)
+
+      resultElement.innerHTML = '<h1>Reza Nazeri</h1>'
+    }
+
+    main()
+  </script>
+</body>
+
+</html>

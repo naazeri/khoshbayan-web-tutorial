@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+    .input-ok {
+      border: 2px #00bb00 solid;
+    }
+
+    .input-error {
+      border: 2px #ff0000 solid;
+    }
+  </style>
+</head>
+
+<body>
+  <form action="" method="get">
+    <label for="birthYear">Birth Year</label>
+    <br>
+    <input onchange="checkBirthYear()" type="number" name="birthYear" id="birthYear">
+    <br>
+    <br>
+    <label for="name">Name</label>
+    <br>
+    <input type="text" name="name" id="name">
+    <br>
+    <br>
+    <input onclick="calculateAge()" type="button" value="Calculate">
+  </form>
+
+  <p id="result"></p>
+
+  <script>
+    var currentYear = new Date().getFullYear()
+    var birthYearElement = null
+    var nameElement = null
+    var resultElement = null
+
+    function log(text) {
+      console.log(text)
+    }
+
+    function select(selector) {
+      return document.querySelector(selector)
+    }
+
+    function checkBirthYear() {
+      var birthYear = birthYearElement.value
+
+      if (birthYear && birthYear > 0 && birthYear < currentYear) {
+        birthYearElement.className = 'input-ok'
+        resultElement.innerHTML = ''
+      } else {
+        birthYearElement.className = 'input-error'
+        resultElement.innerHTML = `Error: Birth year must between 1 and ${currentYear}`
+      }
+    }
+
+    function calculateAge() {
+      var birthYear = birthYearElement.value
+      var age = currentYear - birthYear
+
+      resultElement.innerHTML = `${nameElement.value}: ${age}`
+      // resultElement.innerHTML = nameElement.value + ': ' + age
+    }
+
+    function main() {
+      birthYearElement = select('#birthYear')
+      nameElement = select('#name')
+      resultElement = select('#result')
+    }
+
+    main()
+  </script>
+</body>
+
+</html>
