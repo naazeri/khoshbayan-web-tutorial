@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <input id="number" type="text">
+  <input type="button" onclick="check()" value="Check">
+
+  <script>
+    function randomIntNumber(min, max) {
+      return Math.floor(Math.random() * (max - min + 1)) + min;
+    }
+
+    let number = randomIntNumber(0, 100)
+
+    let count = 10
+
+    function check() {
+      let numberElement = document.getElementById("number")
+      let guess = numberElement.value
+
+      if (guess <= 100 && guess >= 0) {
+
+        let difference = number - guess
+
+        if (count > 0) {
+          count -= 1
+          console.log("🚀 ~ file: index.html:34 ~ check ~ count:", count)
+
+          if (difference == 0) {
+            console.log("Win")
+          } else if (difference > 0 && difference < 10) {
+            console.log('close, guess more');
+          } else if (difference < 0 && difference > -10) {
+            console.log('close, guess less');
+          } else if (difference >= 10) {
+            console.log('far, guess more');
+          } else if (difference <= -10) {
+            console.log('far, guess less');
+          }
+        } else {
+          console.log('error, must between 0 and 100');
+        }
+      } else {
+        console.log('game over');
+      }
+    }
+  </script>
+</body>
+
+</html>

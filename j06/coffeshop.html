@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background: url(images/coffe.webp);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      min-height: 100vh;
+      text-align: center;
+      font-family: 'Courier New', Courier, monospace;
+    }
+
+    .menu {
+      width: 70vw;
+      margin: auto;
+      margin: 100px auto;
+      border-radius: 12px;
+      padding: 50px 10px;
+      background: #ffffff99;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="menu">
+    <div class="menu-item">
+      <h2>Espresso........1$ <button onclick="order(1, 'Espresso.....1$')">Order</button></h2>
+    </div>
+    <div class="menu-item">
+      <h2>Mocca...........2$ <button onclick="order(2, 'Mocca.....2$')">Order</button></h2>
+    </div>
+    <div class="menu-item">
+      <h2>Latte...........5$ <button onclick="order(5, 'Latte.....5$')">Order</button></h2>
+    </div>
+    <br>
+    <div class="result">
+      <h3 id="total">Total: 0$</h3>
+      <p id="orders"></p>
+    </div>
+  </div>
+
+  <script>
+    var total = 0
+    var totalElement = document.getElementById('total')
+    var ordersElement = document.getElementById('orders')
+
+    function order(price, item) {
+      total += price
+      totalElement.innerHTML = "Total: " + total + "$";
+      ordersElement.innerHTML += item + "<br>"
+    }
+  </script>
+</body>
+
+</html>
