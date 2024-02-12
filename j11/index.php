@@ -11,7 +11,12 @@
     }
 
     .price {
-      color: aquamarine;
+      color: red;
+    }
+
+    .after-price {
+      color: green;
+
     }
   </style>
 </head>
@@ -43,13 +48,30 @@
     $basePrice = $item['price'];
     $off = $item['off'];
     $afterPrice = $basePrice -  $basePrice * $off / 100;
+    $profit = $basePrice * $off / 100;
   ?>
 
     <h1 class='title'><?php echo $item['title'] ?></h1>
     <img src="<?php echo $item['image'] ?>" alt=''>
-    <h3 class="price"><?php echo $item['price'] ?>$</h3>
-    <h3><?php echo $afterPrice ?></h3>
-    <h3><?php echo $item['off'] ?>%</h3>
+
+    <?php if ($item['off'] != 0) { ?>
+      <h3 class="price">
+        <del>
+          <?php echo $item['price'] ?>$
+        </del>
+      </h3>
+      <h3 class="after-price"><?php echo $afterPrice ?>$</h3>
+      <h3><?php echo $item['off'] ?>%</h3>
+      <h3><?php echo $profit ?>$</h3>
+    <?php
+    } else {
+    ?>
+      <h3 class="after-price">
+        <?php echo $item['price'] ?>$
+      </h3>
+    <?php
+    }
+    ?>
     <hr>
 
   <?php
