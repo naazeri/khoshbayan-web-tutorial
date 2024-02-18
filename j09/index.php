@@ -19,7 +19,7 @@
 
 <body>
   <?php
-  $myGame = [
+  $myGames = [
     [
       "title" => "GTA V",
       "rank" => 7.8,
@@ -40,7 +40,7 @@
     ],
   ];
 
-  foreach ($myGame as $item) {
+  foreach ($myGames as $item) {
     echo "
     <h2 class='title'>{$item['title']}</h2>
     <img class='image' src='{$item['image']}'></img>
@@ -50,6 +50,8 @@
   }
 
   ?>
+
+  <h2 class="title">GTA V</h2>
 </body>
 
 </html>
