@@ -5,12 +5,43 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://cdn.simplecss.org/simple.min.css">
-  <title>Document</title>
+  <title>Update</title>
 </head>
 
 <body>
+  <?php
+  $con = mysqli_connect("localhost", "root", "root", "school");
+
+  if (mysqli_connect_errno()) {
+    die("Connection Fail" . mysqli_connect_error());
+  }
+
+  if (!isset($_GET['id'])) {
+    die("need id");
+  }
+
+  $id = $_GET['id'];
+
+  $query = mysqli_query($con, "SELECT * FROM student WHERE id = $id");
+
+  echo "<table border='1'>";
+  echo "<tr><th>ID</th><th>Name</th><th>Paye Tahsili</th><th>Tarikh Tavalod</th></tr>";
+
+  while ($row = mysqli_fetch_array($query)) {
+    echo "<tr>";
+    echo "<td>" . $row['id'] . "</td>";
+    echo "<td>" . $row['name'] . "</td>";
+    echo "<td>" . $row['paye_tahsili'] . "</td>";
+    echo "<td>" . $row['tarikh_tavalod'] . "</td>";
+    echo "</tr>";
+  }
+
+  echo "</table>";
+
+  ?>
+
   <form method="POST">
-    <h2>Create</h2>
+    <h2>Update</h2>
     <div>
       <input type="text" name="name" placeholder="نام" required>
     </div>
@@ -46,12 +77,17 @@ if (isset($_POST['submit'])) {
   $paye_tahsili = $_POST['paye_tahsili'];
   $tarikh_tavalod = $_POST['tarikh_tavalod'];
 
-  $query = mysqli_query($con, "INSERT INTO student ( name, paye_tahsili, tarikh_tavalod ) VALUES ('$name','$paye_tahsili', '$tarikh_tavalod' )");
+  $sql = "UPDATE student SET name = '$name', paye_tahsili = '$paye_tahsili', tarikh_tavalod = '$tarikh_tavalod' WHERE id = $id";
+
+  $query = mysqli_query($con, $sql);
 
   if ($query) {
-    echo "<p>Success</p>";
+    echo "<p>Update Success</p>";
   } else {
     echo "error on insert";
   }
 }
+
+$con->close();
+
 ?>
