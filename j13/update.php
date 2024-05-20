@@ -77,9 +77,7 @@ if (isset($_POST['submit'])) {
   $paye_tahsili = $_POST['paye_tahsili'];
   $tarikh_tavalod = $_POST['tarikh_tavalod'];
 
-  $sql = "UPDATE student SET name = '$name', paye_tahsili = '$paye_tahsili', tarikh_tavalod = '$tarikh_tavalod' WHERE id = $id";
-
-  $query = mysqli_query($con, $sql);
+  $query = mysqli_query($con, "UPDATE student SET name = '$name', paye_tahsili = '$paye_tahsili', tarikh_tavalod = '$tarikh_tavalod' WHERE id = $id");
 
   if ($query) {
     echo "<p>Update Success</p>";

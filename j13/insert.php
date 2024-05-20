@@ -36,9 +36,7 @@
 $con = mysqli_connect("localhost",    "root",   "root",   "school");
 
 if (mysqli_connect_errno()) {
-  echo "Connection Fail" . mysqli_connect_error();
-} else {
-  echo "<p>Connected</p>";
+  die("Connection Fail" . mysqli_connect_error());
 }
 
 if (isset($_POST['submit'])) {
