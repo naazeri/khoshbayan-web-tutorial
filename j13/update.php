@@ -83,6 +83,8 @@ if (isset($_POST['submit'])) {
 
   if ($query) {
     echo "<p>Update Success</p>";
+    header("Location: update.php?id=$id");
+    exit;
   } else {
     echo "error on insert";
   }
